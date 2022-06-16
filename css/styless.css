@@ -1,0 +1,200 @@
+:root {
+  --main-font: 'Roboto';
+  --second-font: 'Raleway';
+  --title-color: #212121;
+  --main-color: #757575;
+  --white-color: #ffffff;
+  --footercontact-color: rgba(255, 255, 255, 0.6);
+  --blue-color: #2196f3;
+  --second-background: #2f303a;
+  --comand-background: #f5f4fa;
+  --hoverbutton-background: #188ce8;
+  --border-color: #757575;
+}
+
+body {
+  font-family: var(--main-font), sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+  background-color: var(--white-color);
+}
+
+.header {
+  border: 1px solid #ececec;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.hero,
+.footer {
+  background-color: var(--second-background);
+}
+.web {
+  color: var(--blue-color);
+}
+
+.list {
+  list-style: none;
+}
+.link,
+.log {
+  text-decoration: none;
+  color: var(--title-color);
+}
+.log {
+  font-family: var(--second-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+}
+.contact {
+  text-decoration: none;
+  color: var(--main-color);
+}
+.link:hover,
+.link:focus,
+.contact:hover,
+.contact:focus,
+.adress:hover,
+.adress:focus {
+  color: var(--blue-color);
+}
+.footer.contact {
+  color: var(--footercontact-color);
+}
+.hero .title {
+  color: var(--white-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 3.75;
+  /*60px or 136% */
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.button {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--main-font), sans-serif;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  /* identical to box height,30px or 188% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--hoverbutton-background);
+}
+.list-unit {
+  background-color: var(--white-color);
+  box-shadow: 0px 2px 1px 0px #00000033;
+  box-shadow: 0px 1px 1px 0px #00000024;
+  box-shadow: 0px 1px 3px 0px #0000001f;
+}
+.specialties {
+  line-height: 1.5;
+  /*24px or 171% */
+}
+.specialties .title {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.team {
+  font-size: 16px;
+  line-height: 1.19;
+  /* 19px, identical to box height */
+  text-align: center;
+  background-color: var(--comand-background);
+}
+.wework > .title,
+.team > .title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 2.63;
+  text-align: center;
+}
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  /* identical to box height */
+  color: var(--title-color);
+}
+.footer > .list {
+  font-size: 14px;
+  line-height: 1.5;
+  /* or 171% */
+}
+.adress {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.white {
+  color: var(--white-color);
+}
+
+/* Portfolio */
+.filtr {
+  font-family: var(--main-font), sans-serif;
+  color: var(--title-color);
+  background-color: var(--comand-background);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  /* identical to box height, or 162% */
+  text-align: center;
+}
+.filtr:hover,
+.filtr:focus {
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  /* box-shadow: 0px 2px 2px 0px #0000001f;
+  box-shadow: 0px 1px 2px 0px #00000014;
+  box-shadow: 0px 3px 1px 0px #0000001a; */
+}
+.article {
+  border: 1px solid #eeeeee;
+}
+.article > .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2.25;
+  /* identical to box height, or 200% */
+}
+.article > .text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.current {
+  color: var(--blue-color);
+}
