@@ -10,6 +10,9 @@
   --comand-background: #f5f4fa;
   --hoverbutton-background: #188ce8;
   --border-color: #757575;
+  /* сетка */
+  --indent: 30px;
+  --items: 3;
 }
 
 body {
@@ -18,6 +21,30 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-color);
   background-color: var(--white-color);
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .header {
@@ -25,18 +52,24 @@ body {
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.02em;
+  padding: 25px 0px;
 }
-
-.hero,
-.footer {
-  background-color: var(--second-background);
+.list {
+  display: flex;
+  list-style: none;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+.header-start {
+  display: flex;
+  align-items: center;
 }
 .web {
   color: var(--blue-color);
-}
-
-.list {
-  list-style: none;
 }
 .link,
 .log {
@@ -50,6 +83,11 @@ body {
   font-size: 26px;
   line-height: 1.9;
   letter-spacing: 0.03em;
+  margin-right: 93px;
+}
+.contact-link:not(:last-child),
+.nav-link:not(:last-child) {
+  margin-right: 50px;
 }
 .contact {
   text-decoration: none;
@@ -63,20 +101,41 @@ body {
 .adress:focus {
   color: var(--blue-color);
 }
-.footer.contact {
-  color: var(--footercontact-color);
+.section:not(:last-child) {
+  margin-bottom: 94px;
+}
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  align-items: center;
+}
+.hero,
+.footer {
+  background-color: var(--second-background);
 }
 .hero .title {
+  display: block;
   color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
-  line-height: 3.75;
-  /*60px or 136% */
+  line-height: 136%;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  width: 696px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding: 0px;
 }
 .button {
+  display: flex;
+  width: 200px;
+  height: 30px;
+  padding: 10px 31px;
+  align-items: center;
+  text-align: center;
   background-color: var(--blue-color);
   color: var(--white-color);
   border: none;
@@ -86,11 +145,9 @@ body {
   letter-spacing: 0.06em;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.875;
+  line-height: 188%;
   /* identical to box height,30px or 188% */
-  display: flex;
-  align-items: center;
-  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .button:hover,
 .button:focus {
@@ -103,28 +160,15 @@ body {
   box-shadow: 0px 1px 3px 0px #0000001f;
 }
 .specialties {
-  line-height: 1.5;
+  line-height: 171%;
   /*24px or 171% */
 }
-.specialties .title {
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
+.specialties .list,
+.wework .list,
+.team .list {
+  justify-content: space-between;
 }
-.team {
-  font-size: 16px;
-  line-height: 1.19;
-  /* 19px, identical to box height */
-  text-align: center;
-  background-color: var(--comand-background);
-}
-.wework > .title,
-.team > .title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 2.63;
-  text-align: center;
-}
+
 .title {
   font-weight: 500;
   font-size: 16px;
@@ -132,21 +176,93 @@ body {
   /* identical to box height */
   color: var(--title-color);
 }
-.footer > .list {
+.specialties .title {
+  font-weight: 700;
   font-size: 14px;
-  line-height: 1.5;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.specialties .list-item {
+  display: inline-block;
+  width: 270px;
+  text-align: left;
+}
+.team {
+  font-size: 16px;
+  line-height: 1.19;
+  /* 19px, identical to box height */
+  text-align: center;
+  background-color: var(--comand-background);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.team .container {
+  display: flex;
+  flex-direction: column;
+}
+.wework .title,
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.unit-img {
+  margin-bottom: 30px;
+}
+.list-unit {
+  padding-bottom: 30px;
+}
+.list-unit .title {
+  margin-bottom: 10px;
+}
+.footer {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+}
+.footer .log {
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+.footer .list {
+  font-size: 14px;
+  line-height: 171%;
   /* or 171% */
+  flex-direction: column;
+}
+.footer-list-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .adress {
   text-decoration: none;
   color: var(--white-color);
+}
+.footer.contact {
+  color: var(--footercontact-color);
 }
 .white {
   color: var(--white-color);
 }
 
 /* Portfolio */
+.portfolio {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.list-filtr {
+  justify-content: center;
+  padding-bottom: 16px;
+  margin-bottom: 34px;
+}
 .filtr {
+  display: flex;
   font-family: var(--main-font), sans-serif;
   color: var(--title-color);
   background-color: var(--comand-background);
@@ -156,28 +272,49 @@ body {
   letter-spacing: 0.03em;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.63;
+  line-height: 162%;
   /* identical to box height, or 162% */
   text-align: center;
+  padding: 6px 22px;
 }
 .filtr:hover,
 .filtr:focus {
   color: var(--white-color);
   background-color: var(--blue-color);
-  /* box-shadow: 0px 2px 2px 0px #0000001f;
+  box-shadow: 0px 2px 2px 0px #0000001f;
   box-shadow: 0px 1px 2px 0px #00000014;
-  box-shadow: 0px 3px 1px 0px #0000001a; */
+  box-shadow: 0px 3px 1px 0px #0000001a;
+}
+.list-filtr-unit:not(:last-child) {
+  margin-right: 10px;
+}
+.list-article {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--indent) / 2);
 }
 .article {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #eeeeee;
+  flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+  margin: calc(var(--indent) / 2);
+  justify-content: center;
 }
-.article > .title {
+.article-text {
+  display: flex;
+  flex-direction: column;
+  width: 345px;
+  padding: 20px 24px;
+}
+.article .title {
   font-weight: 700;
   font-size: 18px;
-  line-height: 2.25;
+  line-height: 200%;
   /* identical to box height, or 200% */
+  margin-bottom: 4px;
 }
-.article > .text {
+.article .text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
