@@ -23,7 +23,6 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header-start">
         <a class="log" href="./index.html"><span class="web">Web</span>Studio</a>
         <nav class="nav">
           <ul class="list">
@@ -32,10 +31,13 @@
             <li class="nav-link"><a class="link" href="#">Контакты</a></li>
           </ul>
         </nav>
-        </div>
-        <ul class="list">
-          <li class="contact-link"><a class="contact" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-          <li class="contact-link"><a class="contact" href="tel:+380961111111">+38 096 111 11 11</a></li>
+        <ul class="list header-contact">
+          <li class="contact-link">
+            <a class="contact link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="contact-link">
+            <a class="contact link" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
         </ul>
       </div>
     </header>
@@ -82,10 +84,10 @@
         <div class="container">
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="list">
-            <li>
+            <li class="list-item">
               <img src="./images/work/img-1.jpg" alt="Написание кода" width="370" height="295" />
             </li>
-            <li>
+            <li class="list-item">
               <img
                 src="./images/work/img-2.jpg"
                 alt="Робота з интерфейсом"
@@ -93,7 +95,7 @@
                 height="295"
               />
             </li>
-            <li>
+            <li class="list-item">
               <img
                 src="./images/work/img-3.jpg"
                 alt="Графическое оформление"
@@ -110,44 +112,56 @@
           <h2 class="title team-title">Наша команда</h2>
           <ul class="list">
             <li class="list-unit">
-              <img class="unit-img"
+              <img
+                class="unit-img"
                 src="./images/members/member-1.jpg"
                 alt="Игорь Демьяненко, дизайнер продукции"
                 width="270"
                 height="260"
               />
-              <h3 class="title">Игорь Демьяненко</h3>
-              <p lang="en">Product Designer</p>
+              <div class="text-team-unit">
+                <h3 class="title">Игорь Демьяненко</h3>
+                <p lang="en">Product Designer</p>
+              </div>
             </li>
             <li class="list-unit">
-              <img class="unit-img"
+              <img
+                class="unit-img"
                 src="./images/members/member-2.jpg"
                 alt="Ольна Репина, фронтенд-разработчик"
                 width="270"
                 height="260"
               />
-              <h3 class="title">Ольна Репина</h3>
-              <p lang="en">Frontend Developer</p>
+              <div class="text-team-unit">
+                <h3 class="title">Ольна Репина</h3>
+                <p lang="en">Frontend Developer</p>
+              </div>
             </li>
             <li class="list-unit">
-              <img class="unit-img"
+              <img
+                class="unit-img"
                 src="./images/members/member-3.jpg"
                 alt="Николай Тарасов, маркетинг"
                 width="270"
                 height="260"
               />
-              <h3 class="title">Николай Тарасов</h3>
-              <p lang="en">Marketing</p>
+              <div class="text-team-unit">
+                <h3 class="title">Николай Тарасов</h3>
+                <p lang="en">Marketing</p>
+              </div>
             </li>
             <li class="list-unit">
-              <img class="unit-img"
+              <img
+                class="unit-img"
                 src="./images/members/member-4.jpg"
                 alt="Михаил Ермаков, дизайнер пользовательского интерфейса"
                 width="270"
                 height="260"
               />
-              <h3 class="title">Михаил Ермаков</h3>
-              <p lang="en">UI Designer</p>
+              <div class="text-team-unit">
+                <h3 class="title">Михаил Ермаков</h3>
+                <p lang="en">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -168,8 +182,12 @@
               >г. Киев, пр-т Леси Украинки, 26</a
             >
           </li>
-          <li  class="footer-list-item"><a class="contact" href="mailto:info@example.com">info@example.com</a></li>
-          <li  class="footer-list-item"><a class="contact" href="tel:+380991111111">+38 099 111 11 11</a></li>
+          <li class="footer-list-item">
+            <a class="contact link" href="mailto:info@example.com">info@example.com</a>
+          </li>
+          <li class="footer-list-item">
+            <a class="contact link" href="tel:+380991111111">+38 099 111 11 11</a>
+          </li>
         </ul>
       </div>
     </footer>
