@@ -34,21 +34,24 @@ img {
   max-width: 100%;
   height: auto;
 }
+address{
+  font-style: normal;
+}
 .container {
   width: 1200px;
  margin: 0 auto;
  padding: 0 15px;
 }
 
-.section:not(:last-child) {
-  margin-bottom: 94px;
+.section{
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .header {
   border: 1px solid #ececec;
   padding: 24px 0px;
 }
 .list {
-  display: flex;
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -62,7 +65,9 @@ img {
   display: flex;
   align-items: center;
 }
-
+.header .list{
+  display: flex;
+}
 
 .web {
   color: var(--blue-color);
@@ -81,8 +86,8 @@ img {
 .nav-link:not(:last-child) {
   margin-right: 50px;
 }
-.nav-link:last-child{
-  margin-right: 331px;
+.nav{
+  margin-right: auto;
 }
 .contact {
   color: var(--main-color);
@@ -101,7 +106,6 @@ img {
   color: var(--blue-color);
 }
 .hero {
-  display: flex;
   padding: 200px 0;
   text-align: center;
 }
@@ -120,7 +124,6 @@ img {
   width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
-  padding: 0px;
 }
 .button {
   min-width: 200px;
@@ -148,11 +151,15 @@ img {
   box-shadow: 0px 1px 1px 0px #00000024;
   box-shadow: 0px 1px 3px 0px #0000001f;
 }
-.specialties {
+.specialties p{
   line-height: 1.71;
   /*24px or 171% */
 }
-
+.wework .list,
+.specialties .list,
+.team .list{
+  display: flex;
+}
 .wework .list-item:not(:last-child){
   margin-right: 30px;
 }
@@ -170,10 +177,12 @@ img {
   margin-bottom: 10px;
 }
 .specialties .list-item {
-  display: inline-block;
   width: 270px;
-  text-align: left;
 }
+.specialties .list-item:not(:last-child){
+  margin-right: 30px;
+}
+
 .team {
   /* font-size: 16px;
   line-height: 1.19; */
@@ -192,11 +201,8 @@ img {
   text-align: center;
   margin-bottom: 50px;
 }
-
-.unit-img {
-  margin-bottom: 30px;
-}
-.list-unit {
+.text-team-unit{
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 .list-unit:not(:last-child){
@@ -205,26 +211,27 @@ img {
 .list-unit .title {
   margin-bottom: 10px;
 }
+.team p{
+  font-weight: 400;
+font-size: 16px;
+line-height: 1.18;
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
-.footer .log {
-  margin-right: 0px;
+.footer .log{
+  display: block;
+  margin-right: 0;
   margin-bottom: 20px;
 }
-.footer .list {
+.footer .link{
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.19;
-  flex-direction: column;
+  line-height: 1.71;
 }
-.footer-list-item:not(:last-child) {
+.footer .footer-list-item:not(:last-child) {
   margin-bottom: 9px;
-}
-.adress {
-  text-decoration: none;
-  color: var(--white-color);
 }
 .footer.contact {
   color: var(--footercontact-color);
@@ -235,14 +242,13 @@ img {
 
 /* Portfolio */
 .portfolio {
-  display: flex;
   padding-top: 94px;
   padding-bottom: 94px;
 }
 .list-filtr {
+  display: flex;
   justify-content: center;
-  padding-bottom: 16px;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .filtr {
   display: flex;
@@ -277,17 +283,12 @@ img {
   margin: calc(-1 * var(--indent) / 2);
 }
 .article {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #eeeeee;
   flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
   margin: calc(var(--indent) / 2);
-  justify-content: center;
 }
 .article-text {
-  display: flex;
-  flex-direction: column;
-  width: 345px;
+  border: 1px solid #eeeeee;
+  border-top: none;
   padding: 20px 24px;
 }
 .article .title {
